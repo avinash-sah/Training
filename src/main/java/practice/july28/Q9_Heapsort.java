@@ -4,7 +4,7 @@ public class Q9_Heapsort {
 
     public static void main(String[] args) {
         int arr[] = {12, 11, 13, 5, 6, 7};
-        //swap(arr, 1, 2);
+
         heap_sort(arr);
         for (int i : arr) {
             System.out.print(i + " ");
@@ -20,7 +20,7 @@ public class Q9_Heapsort {
         }
 
         //now sorting
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i > 0; i--) {
             swap(pArr, i, 0);
             heapify(pArr, i, 0);
         }
@@ -47,10 +47,13 @@ public class Q9_Heapsort {
     }
 
     private static void swap(int[] pArr, int pI, int pJ) {
+       /* if (pArr[pI] == pArr[pJ]) {
+            return;
+        }*/
 
-        int temp = pArr[pI];
-        pArr[pI] = pArr[pJ];
-        pArr[pJ] = temp;
+        pArr[pI] = pArr[pI] + pArr[pJ];
+        pArr[pJ] = pArr[pI] - pArr[pJ];
+        pArr[pI] = pArr[pI] - pArr[pJ];
     }
 
 
