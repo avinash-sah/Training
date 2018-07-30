@@ -15,7 +15,7 @@ public class Q9_Heapsort {
     private static void heap_sort(int[] pArr) {
         int n = pArr.length;
         //n/2 -1 is the last possible root in heap
-        for (int i = n / 2 - 1; i >= 0; i--) {
+        for (int i = (n -1)/ 2 ; i >= 0; i--) {
             heapify(pArr, n, i);
         }
 
