@@ -39,7 +39,7 @@ public class Q21_DoubleLL_Reverse {
         }
 
         if (temp != null){
-            head = temp;
+            head = temp.prev;
         }
 
     }

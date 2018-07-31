@@ -8,7 +8,8 @@ public class Q11_mColorProblem {
     }
 
     public static void main(String[] args) {
-        int graph[][] = {{0, 1, 1, 1},
+        int graph[][] = {
+                {0, 1, 1, 1},
                 {1, 0, 1, 0},
                 {1, 1, 0, 1},
                 {1, 0, 1, 0},
