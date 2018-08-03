@@ -7,7 +7,7 @@ public class Q17_Inorder_preorder {
         Q17_Inorder_preorder tree = new Q17_Inorder_preorder();
         char in[] = new char[]{'D', 'B', 'E', 'A', 'F', 'C'};
         char pre[] = new char[]{'A', 'B', 'D', 'E', 'C', 'F'};
-        tree.head = tree.formTree(pre, 0, in.length - 1, in, 0, pre.length - 1);
+        tree.head = tree.formTree(pre, 0, pre.length - 1, in, 0, in.length - 1);
         tree.inorder(tree.head);
     }
 

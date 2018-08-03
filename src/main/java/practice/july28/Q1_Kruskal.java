@@ -79,12 +79,10 @@ public class Q1_Kruskal {
 
             Arrays.sort(edge);
 
-            int i = 0;
             int e = 0;
 
-            while (e < V - 1) {
+            for (int i = 0; e < V - 1; i++) {
                 Edge next_edge = edge[i];
-                i++;
 
                 int xSet = find(subsets, next_edge.src);
                 int ySet = find(subsets, next_edge.dest);

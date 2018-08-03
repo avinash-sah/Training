@@ -26,7 +26,7 @@ public class Q3_MaxSumSet {
         if (pSum == 0) {
             return true;
         }
-        if (pSum != 0 && pN == 0) {
+        if (pN == 0) {
             return false;
         }
 
@@ -52,10 +52,10 @@ public class Q3_MaxSumSet {
         for (int i = 1; i <= pSum; i++) {
             for (int j = 1; j <= pN; j++) {
                 if (i < pSet[j - 1]) {
-                    set[i][j] = set[i][j - 1] ||
-                            set[i - pSet[j - 1]][j - 1];
-                } else {
                     set[i][j] = set[i][j - 1];
+                } else {
+                    set[i][j] =  set[i][j - 1] ||
+                            set[i - pSet[j - 1]][j - 1];
                 }
             }
         }
