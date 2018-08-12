@@ -1,4 +1,4 @@
-package practice.mustdo;
+package practice.mustdo.array;
 
 public class QArray27_Majority {
 

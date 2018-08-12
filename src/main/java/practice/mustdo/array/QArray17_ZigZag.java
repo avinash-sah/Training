@@ -1,4 +1,4 @@
-package practice.mustdo;
+package practice.mustdo.array;
 
 public class QArray17_ZigZag {
     public static void main(String[] args) {

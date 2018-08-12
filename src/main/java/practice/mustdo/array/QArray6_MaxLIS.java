@@ -1,4 +1,4 @@
-package practice.mustdo;
+package practice.mustdo.array;
 
 public class QArray6_MaxLIS {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package practice.mustdo;
+package practice.mustdo.array;
 
 public class QArray2_missingNumber {
 

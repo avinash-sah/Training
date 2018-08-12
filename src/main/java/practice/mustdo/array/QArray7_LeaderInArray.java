@@ -1,4 +1,4 @@
-package practice.mustdo;
+package practice.mustdo.array;
 
 public class QArray7_LeaderInArray {
     public static void main(String[] args) {

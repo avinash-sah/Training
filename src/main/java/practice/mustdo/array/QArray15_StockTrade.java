@@ -1,4 +1,4 @@
-package practice.mustdo;
+package practice.mustdo.array;
 
 import java.util.ArrayList;
 
