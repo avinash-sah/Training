@@ -1,10 +1,10 @@
 package practice.mustdo.tree;
 
-public class QTree15_Diameter {
+public class QTree13_Diameter {
     private Node root;
 
     public static void main(String[] args) {
-        QTree15_Diameter tree = new QTree15_Diameter();
+        QTree13_Diameter tree = new QTree13_Diameter();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
