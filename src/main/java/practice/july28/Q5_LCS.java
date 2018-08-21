@@ -5,12 +5,19 @@ public class Q5_LCS {
         String s1 = "AGGTAB";
         String s2 = "GXTXAYB";
 
+        String a = "OldSite:GeeksforGeeks.org";
+        String b = "NewSite:GeeksQuiz.com";
+
         char[] X = s1.toCharArray();
         char[] Y = s2.toCharArray();
         int m = X.length;
         int n = Y.length;
         System.out.println(lcs_r(X, Y, m, n));
         System.out.println(lcs(X, Y, m, n));
+
+        
+        System.out.println("Length of Longest Common Substring is "
+                + lcs(s1.toCharArray(), s2.toCharArray(), s1.length(), s2.length()));
     }
 
     static int lcs_r(char[] x, char[] y, int m, int n) {
