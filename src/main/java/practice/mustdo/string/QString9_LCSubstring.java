@@ -34,12 +34,12 @@ public class QString9_LCSubstring {
 
         }
 
-        for (int i = 0; i <= pM ; i++) {
+        /*for (int i = 0; i <= pM ; i++) {
             for (int j = 0; j <= pN; j++) {
                 System.out.print(LCString[i][j] +" ");
             }
             System.out.println();
-        }
+        }*/
 
         return max;
     }
