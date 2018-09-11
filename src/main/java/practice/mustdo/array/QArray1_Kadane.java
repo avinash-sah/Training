@@ -9,7 +9,7 @@ public class QArray1_Kadane {
     }
 
     private static void maxSubArraySum(int[] pA, int pN) {
-        int max_so_far = Integer.MIN_VALUE;
+        int max_so_far = pA[0];
         int max_ending_here = 0;
         int start = 0;
         int end = 0;
