@@ -5,14 +5,39 @@ public class Main_yu {
     public static void main(String[] args) {
         String s = "gfg";
         String[] st = {
-                "xy", "pp", "hefg"
+                "xy", "pp", "baca", "abc"
         };
 
-        for (String str: st) {
-            System.out.println(nextpermutation(str));
+        for (String str : st) {
+            System.out.println(rearrangeWord(str));
         }
-        String val = nextpermutation(s);
+        String val = rearrangeWord(s);
         System.out.println(val);
+    }
+
+    public static String rearrangeWord(String word) {
+
+        int len = word.length();
+        int i = len - 2;
+        char[] chars = word.toCharArray();
+        while (i >= 0 && chars[i] >= chars[i + 1]) {
+            i--;
+        }
+        if (i < 0) {
+            return "no answer";
+        }
+
+        int index = search(chars, i + 1, len - 1, word.charAt(i));
+       for (int j = len -1; j > i ; j--) {
+            if(chars[j] < chars[i]){
+                index = j;
+                break;
+            }
+        }
+
+        swap(chars, index, i);
+        reverse(chars, i + 1, len - 1);
+        return new String(chars);
     }
 
     private static String nextpermutation(String word) {
@@ -26,7 +51,7 @@ public class Main_yu {
         }
 
         if (i < 0) {
-            result = "No Answer";
+            result = "no answer";
         } else {
             int index = search(s, i + 1, len - 1, s[i]);
             swap(s, i, index);
@@ -37,7 +62,7 @@ public class Main_yu {
     }
 
     private static void reverse(char[] s, int l, int r) {
-        while (l < r){
+        while (l < r) {
             swap(s, l++, r--);
         }
     }
@@ -66,6 +91,8 @@ public class Main_yu {
         }
         return index;
     }
+
+
 }
 
 

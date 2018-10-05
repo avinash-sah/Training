@@ -18,9 +18,10 @@ public class QArray11_KthSmallest {
         Heap(int[] pArr, int k) {
             capacity = k;
             heap_array = new int[k];
-            size = 0;
+            size = -1;
             for (int i = 0; i < k; i++) {
                 heap_array[i] = pArr[i];
+                size++;
             }
             for (int i = parent(size); i >= 0; i--) {
                 heapify(i);

@@ -1,5 +1,6 @@
 package practice.july28;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -49,14 +50,15 @@ public class Q14_DFS {
             pVisited[pS] = true;
             System.out.print(pS + " ");
 
-            Iterator<Integer> iterator = adj[pS].listIterator();
-            while (iterator.hasNext()) {
-                int s = iterator.next();
+            /*for (Integer s : adj[pS]) {
                 if (!pVisited[s]) {
                     dfsUtil(pVisited, s);
                 }
-            }
+            }*/
 
+            adj[pS].stream()
+                    .filter(i-> !pVisited[i])
+                    .forEach(i->dfsUtil(pVisited, i));
         }
     }
 }

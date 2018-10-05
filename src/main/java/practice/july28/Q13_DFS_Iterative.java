@@ -51,9 +51,7 @@ public class Q13_DFS_Iterative {
                     visited[pS] = true;
                 }
 
-                Iterator<Integer> iterator = adj[pS].listIterator();
-                while (iterator.hasNext()) {
-                    int v = iterator.next();
+                for (Integer v : adj[pS]) {
                     if (!visited[v]) {
                         stack.push(v);
                     }

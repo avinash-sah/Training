@@ -16,33 +16,30 @@ public class AscendingSort {
     }
 
     static List<Integer> rearrange(List<Integer> elements) {
-        elements.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                int count1 = countBits(o1);
-                int count2 = countBits(o2);
+        elements.sort((o1, o2) -> {
+            int count1 = countBits(o1);
+            int count2 = countBits(o2);
 
-                if(count1 == count2){
-                    return o1.compareTo(o2);
-                }else if(count1 < count2){
-                    return -1;
-                }else{
-                    return 1;
-                }
-            }
+            return (count1 == count2)? o1.compareTo(o2): count1 - count2;
 
-
+            /*if(count1 == count2){
+                return o1.compareTo(o2);
+            }else if(count1 < count2){
+                return -1;
+            }else{
+                return 1;
+            }*/
         });
         return elements;
     }
 
-    private static int countBits(int i) {
+    private static int countBits(int number) {
         int count = 0;
-        while (i > 0) {
-            if ((i & 1) == 1) {
+        while (number > 0) {
+            if ((number & 1) == 1) {
                 count++;
             }
-            i >>= 1;
+            number >>= 1;
         }
         return count;
     }

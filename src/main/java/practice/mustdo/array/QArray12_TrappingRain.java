@@ -6,6 +6,9 @@ public class QArray12_TrappingRain {
         int trap = findTrapWater(arr);
         System.out.println(trap);
 
+        int srr[] ={5, 2, 2, 1, 2, 2, 0, 2};
+        System.out.println(findTrapWater(srr));
+
     }
 
     private static int findTrapWater(int[] pArr) {

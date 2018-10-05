@@ -15,13 +15,13 @@ public class QArray17_ZigZag {
 
         for (int i = 0; i < pArr.length - 1; i++) {
             if (flag) {
-                if (pArr[i] < pArr[i + 1]) {
+                if (pArr[i] > pArr[i + 1]) {
                     int temp = pArr[i + 1];
                     pArr[i + 1] = pArr[i];
                     pArr[i] = temp;
                 }
             } else {
-                if (pArr[i] > pArr[i + 1]) {
+                if (pArr[i] < pArr[i + 1]) {
                     int temp = pArr[i + 1];
                     pArr[i + 1] = pArr[i];
                     pArr[i] = temp;
